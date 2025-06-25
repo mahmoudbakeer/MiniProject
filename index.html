@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Motivation</h1>
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+        </header>
+
+        <main>
+            <div class="quote-card">
+                <p id="quoteText">Click below for a motivational quote!</p>
+                <p id="quoteAuthor" class="author"></p>
+                <div>
+                    <button id="newQuoteBtn"><i class="fas fa-sync-alt"></i> New Quote</button>
+                    <button id="saveQuoteBtn"><i class="far fa-heart"></i> Save</button>
+                </div>
+            </div>
+
+            <div class="add-quote">
+                <h2>Add Your Quote</h2>
+                <form id="customQuoteForm">
+                    <textarea id="customQuoteText" placeholder="Your quote" required></textarea>
+                    <input type="text" id="customQuoteAuthor" placeholder="Author">
+                    <button type="submit"><i class="fas fa-plus"></i> Add Quote</button>
+                </form>
+            </div>
+
+            <div class="favorites">
+                <h2>Favorite Quotes</h2>
+                <input type="text" id="searchInput" placeholder="Search by author...">
+                <div class="favorites-list" id="favoritesList">
+                    <p>No favorites yet</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
